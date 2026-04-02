@@ -159,12 +159,14 @@ The result is a plugin that learns from the best — and surpasses them in key a
 
 ---
 
-## Quick Start
+## Installation
+
+### Step 1: Install the Plugin
+
+Copy and paste this into your terminal:
 
 ```bash
-# For Claude Code, AmpCode, Cursor, etc.:
-Install and configure oh-my-opencode by following the instructions here:
-https://raw.githubusercontent.com/ailyedu2030/oh-my-opencode-enhanced/refs/heads/main/docs/guide/installation.md
+curl -fsSL https://raw.githubusercontent.com/ailyedu2030/oh-my-opencode-enhanced/refs/heads/main/docs/guide/installation.md | bash
 ```
 
 Or for LLM agents:
@@ -172,6 +174,117 @@ Or for LLM agents:
 ```bash
 curl -s https://raw.githubusercontent.com/ailyedu2030/oh-my-opencode-enhanced/refs/heads/main/docs/guide/installation.md
 ```
+
+### Step 2: Configure Your Models
+
+The installer will ask about your subscriptions:
+
+1. **Claude** — Do you have Pro/Max? (yes/no/max20)
+2. **OpenAI** — Do you have ChatGPT Plus? (yes/no)
+3. **Gemini** — Do you have Gemini API? (yes/no)
+
+### Step 3: You're Ready
+
+That's it. No manual config. No clicking around.
+
+---
+
+## How to Use
+
+Once installed, just talk to your agent naturally. But here are the **power moves**:
+
+### 🚀 Ultrawork Mode
+
+Start a task and let the agent run until it's done.
+
+```
+ultrawork
+# or
+ulw
+```
+
+The agent activates everything it has. Plans, executes, iterates. Doesn't stop until 100% done.
+
+### 📋 Task Management
+
+```
+/task <description>     # Create a new task
+/task list              # See all tasks
+/task update <id> done  # Mark complete
+```
+
+### 🔍 Deep Analysis
+
+```
+/start-work              # Prometheus interviews you first
+/init-deep              # Generate project structure docs
+```
+
+### 🧹 Code Cleanup
+
+```
+/refactor               # Intelligent refactoring
+```
+
+### 🛡️ Pre-Merge Review
+
+```bash
+/review                 # Analyze your PR diff
+```
+
+The Code Reviewer catches SQL injections, trust boundary violations, conditional side effects, and structural issues — automatically.
+
+### 🎯 Agent Commands
+
+```
+/handoff                # Transfer context between agents
+/stop                   # Stop continuation
+```
+
+### ⚡ Background Work
+
+```bash
+# Delegate to background agent (runs in parallel)
+task description="Analyze the codebase" category="deep" run_in_background=true
+```
+
+---
+
+## Commands Reference
+
+| Command | What It Does |
+|---------|-------------|
+| `ultrawork` / `ulw` | Full power mode. Everything activates. |
+| `/review` | Pre-landing PR review |
+| `/start-work` | Prometheus interview → detailed plan |
+| `/init-deep` | Generate AGENTS.md hierarchy |
+| `/refactor` | Intelligent code cleanup |
+| `/handoff` | Transfer to another agent |
+| `/stop` | Stop continuation |
+| `/task` | Create/update/list tasks |
+
+---
+
+## Configuration (Optional)
+
+Want to customize? Edit `~/.config/opencode/oh-my-opencode.jsonc`:
+
+```jsonc
+{
+  "agents": {
+    "sisyphus": {
+      "model": "claude-opus-4-6",
+      "temperature": 0.1
+    }
+  },
+  "disabled_hooks": [],
+  "background_task": {
+    "concurrency_per_model": 5
+  }
+}
+```
+
+See **[Configuration Docs](docs/reference/configuration.md)** for full options.
 
 ---
 
