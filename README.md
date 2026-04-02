@@ -166,13 +166,13 @@ The result is a plugin that learns from the best — and surpasses them in key a
 Copy and paste this into your terminal:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/ailyedu2030/oh-my-opencode-enhanced/refs/heads/main/docs/guide/installation.md | bash
+curl -fsSL https://raw.githubusercontent.com/ailyedu2030/oh-my-opencode-enhanced/refs/heads/main/docs/guide/installation.sh | bash
 ```
 
 Or for LLM agents:
 
 ```bash
-curl -s https://raw.githubusercontent.com/ailyedu2030/oh-my-opencode-enhanced/refs/heads/main/docs/guide/installation.md
+curl -s https://raw.githubusercontent.com/ailyedu2030/oh-my-opencode-enhanced/refs/heads/main/docs/guide/installation.sh
 ```
 
 ### Step 2: Configure Your Models
