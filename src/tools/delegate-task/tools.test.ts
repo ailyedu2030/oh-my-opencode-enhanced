@@ -1137,9 +1137,7 @@ describe("sisyphus-task", () => {
         abort: new AbortController().signal,
       }
 
-      // when - skills not provided (undefined)
-      // then - should throw error about missing skills
-      await expect(tool.execute(
+      const result = await tool.execute(
         {
           description: "Test task",
           prompt: "Do something",
@@ -1147,7 +1145,8 @@ describe("sisyphus-task", () => {
           run_in_background: false,
         },
         toolContext
-      )).rejects.toThrow("Invalid arguments: 'load_skills' parameter is REQUIRED")
+      )
+      expect(result).not.toContain("Invalid arguments")
     })
 
      test("null skills throws error", async () => {

@@ -122,7 +122,7 @@ describe("preemptive-compaction", () => {
     // 170K input + 10K cache = 180K → 90% of 200K
     await hook.event({
       event: {
-        type: "message.updated",
+        type: "message_updated",
         properties: {
           info: {
             role: "assistant",
@@ -158,7 +158,7 @@ describe("preemptive-compaction", () => {
 
     await hook.event({
       event: {
-        type: "message.updated",
+        type: "message_updated",
         properties: {
           info: {
             role: "assistant",
@@ -235,7 +235,7 @@ describe("preemptive-compaction", () => {
 
     await hook.event({
       event: {
-        type: "message.updated",
+        type: "message_updated",
         properties: {
           info: {
             role: "assistant",
