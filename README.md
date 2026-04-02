@@ -82,7 +82,10 @@
 
 ---
 
-# Oh My OpenCode
+# Oh My OpenCode — Enhanced Fork
+
+> **基于 Claude Code v2.1.88 源码泄漏版增强**
+> Study. Implement. Evolve.
 
 You're juggling Claude Code, Codex, random OSS models. Configuring workflows. Debugging agents.
 
@@ -261,6 +264,32 @@ Skills aren't just prompts. Each brings:
 Built-ins: `playwright` (browser automation), `git-master` (atomic commits, rebase surgery), `frontend-ui-ux` (design-first UI).
 
 Add your own: `.opencode/skills/*/SKILL.md` or `~/.config/opencode/skills/*/SKILL.md`.
+
+### Code Reviewer — Pre-Landing PR Review
+
+Automated code review before every merge. SQL safety, LLM trust boundaries, conditional side effects, structural issues — all caught before human review.
+
+```bash
+/review  # Pre-landing PR review
+```
+
+### Claude Code v2.1.88 Inspired Architecture
+
+When Claude Code's v2.1.88 source code was leaked, we studied it deeply. These features are direct implementations of ideas from that leak, evolved for the open-source ecosystem:
+
+| Leaked Feature | Our Implementation | Philosophy |
+|:---------------|:------------------|:-----------|
+| **Context Compaction** | 3-Layer Compression (micro + snip + auto) | Never hit context limits mid-task |
+| **Tool Factory** | Streaming Executor + Permission Pipeline | Tools are first-class, with gates |
+| **Subagent Isolation** | 4 Modes: in-process/fork/worktree/remote | Agents can't break each other's state |
+| **Permission Pipeline** | Path validation + Bash allowlist | Least privilege by default |
+| **Skill Activation** | Pattern-based context matching | Skills auto-activate where needed |
+
+> *"The leak was a gift. We took it, understood it, and built something better."*
+
+See **[CHANGELOG.md](CHANGELOG.md)** for full v3.8.3 details.
+
+---
 
 **Want the full feature breakdown?** See the **[Features Documentation](docs/reference/features.md)** for agents, hooks, tools, MCPs, and everything else in detail.
 
