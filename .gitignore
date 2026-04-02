@@ -1,0 +1,60 @@
+# Dependencies
+.sisyphus/*
+!.sisyphus/rules/
+node_modules/
+
+# Build output
+dist/
+
+# Platform binaries (built, not committed)
+packages/*/bin/oh-my-opencode
+packages/*/bin/oh-my-opencode.exe
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Lock files (use bun.lockb instead)
+package-lock.json
+yarn.lock
+
+# Unrelated project files (A股量化, planning docs, etc.)
+.planning/
+quant/
+90-*.md
+A股*.md
+autoresearch-*.md
+sisyphus-prompt.md
+portfolio.html
+CLA.md
+CONTRIBUTING.md
+DIFF_REPORT.md
+OPENCODE_TROUBLESHOOTING.md
+uninstall-openclaw.sh
+uvscripts/
+signatures/
+postinstall.mjs
+bun-test.d.ts
+
+# Temporary files
+*.bun-build
+
+
+# Environment
+.env
+.env.local
+test-injection/
+notepad.md
+oauth-success.html
+*.bun-build
+.gitnexus
