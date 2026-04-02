@@ -18,7 +18,7 @@
 
 ## The Story Behind This Project
 
-In late 2024, Claude Code v2.1.88 source code was **accidentally leaked**.
+In Spring 2026, Claude Code v2.1.88 source code was **accidentally leaked**.
 
 Most people moved on. We **dived deep**.
 
